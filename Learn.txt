@@ -48,5 +48,39 @@ public class AppTest {
         assertEquals("Hello, Student! Welcome to Maven CI/CD Demo.", result);
     }
 }
+pipeline{
+agent any
+tools{
+maven:"Maven"
+jdk:"JDK21"
+}
+stages{
+stage("checkout"){
+steps{
+sh ' git branch:'master',url=,'
+}
+}
+stage('build'){
+steps{
+sh 'mvn clean compile"
+}
+}
+stage("test"){
+steps{
+sh 'mvn test'
+}}
+stage('package'){
+steps{
+sh 'mvn package'
+}
+}
+stage("run application"){
+steps{
+sh 'mvn exec:java -Dexec.mainClass="com.example.app.App"'
+}
+}
+
+}
+
 
 
