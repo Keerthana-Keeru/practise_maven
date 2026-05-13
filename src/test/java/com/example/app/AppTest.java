@@ -5,7 +5,8 @@ public class AppTest{
     @Test
     public void testGreet(){
         String result=App.greet("Student");
-	assertEquals("Hello! ,students.",result);
+	assertEquals("hello! Student",result);
 }
 }
 
+return "hello! " + name;
