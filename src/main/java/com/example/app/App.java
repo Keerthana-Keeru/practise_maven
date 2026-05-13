@@ -16,7 +16,7 @@ public class App{
 	}
     }
     public static String greet(String name){
-    	return "hello!," + name + "welcome";
+    	return "hello! " + name;
 }
 }
 
