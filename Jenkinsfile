@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'master', url:'https://github.com/Keerthana-Keeru/practise_maven.git',
-                credentialsId: 'github-token'
+                credentialsId: 'Docker_hub'
             }
         }
 
